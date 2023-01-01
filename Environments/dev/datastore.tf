@@ -1,7 +1,7 @@
-# use already created ami id from AWS for NGINX 
-
 data "aws_ami" "NGINX" {
   executable_users = ["self"]
+  most_recent      = true
+  name_regex       = "^NGINX"
   owners           = ["017706783036"]
 
   filter {
@@ -10,14 +10,12 @@ data "aws_ami" "NGINX" {
   }
 
   filter {
-      name   = "architecture"
-      values = ["x86_64"]
+    name   = "root-device-type"
+    values = ["ebs"]
   }
 
   filter {
-      name   = "root-device-type"
-      values = ["EBS"]
+    name   = "virtualization-type"
+    values = ["hvm"]
   }
 }
-
- 
