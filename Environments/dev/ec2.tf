@@ -7,7 +7,7 @@ module "ec2_instance" {
   instance_type          = var.instanceType
   key_name               = var.key
   monitoring             = true
-  vpc_security_group_ids = module.vpc.default_security_group_id
+  vpc_security_group_ids = [module.vpc.default_security_group_id]
   subnet_id              = module.vpc.private_subnets[0]
 
   tags = {
