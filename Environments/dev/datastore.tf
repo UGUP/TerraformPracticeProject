@@ -6,10 +6,10 @@ data "aws_ami" "NGINX" {
   name_regex       = "NGINX"
   owners           = ["self"]
 
-  filter {
-    name   = "NGINX"
-    values = ["NGINX"]
-  }
+#   filter {
+#     name   = "NGINX"
+#     values = ["NGINX"]
+#   }
 
  
 }
