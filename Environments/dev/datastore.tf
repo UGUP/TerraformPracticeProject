@@ -6,7 +6,7 @@ data "aws_ami" "NGINX" {
 
   filter {
     name   = "name"
-    values = ["NGINX*"]
+    values = ["NGINX"]
   }
 
  
