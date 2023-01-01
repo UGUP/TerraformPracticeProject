@@ -9,5 +9,16 @@ data "aws_ami" "NGINX" {
     values = ["NGINX"]
   }
 
+  filter {
+      name   = "architecture"
+      values = ["x86_64"]
+  }
+
+  filter {
+      name   = "root-device-type"
+      values = ["EBS"]
+  }
+}
+
  
 }
