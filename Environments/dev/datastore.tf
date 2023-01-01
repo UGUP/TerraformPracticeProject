@@ -2,10 +2,10 @@
 
 data "aws_ami" "NGINX" {
   executable_users = ["self"]
-  owners           = ["self"]
+  owners           = ["017706783036"]
 
   filter {
-    name   = "NGINX"
+    name   = "name"
     values = ["NGINX*"]
   }
 
