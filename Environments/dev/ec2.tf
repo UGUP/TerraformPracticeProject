@@ -3,7 +3,7 @@
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   name = "EC2"
-  ami                    = data.aws_ami.NGINX
+  ami                    = data.aws_ami.NGINX.id
   instance_type          = var.instanceType
   key_name               = var.key
   monitoring             = true

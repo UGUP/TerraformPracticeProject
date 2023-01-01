@@ -2,14 +2,12 @@
 
 data "aws_ami" "NGINX" {
   executable_users = ["self"]
-  most_recent      = true
-  name_regex       = "NGINX"
   owners           = ["self"]
 
-#   filter {
-#     name   = "NGINX"
-#     values = ["NGINX"]
-#   }
+  filter {
+    name   = "NGINX"
+    values = ["NGINX*"]
+  }
 
  
 }
