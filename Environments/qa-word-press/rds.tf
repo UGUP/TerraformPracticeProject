@@ -38,7 +38,7 @@ module "db" {
   family = "mysql5.7"
 
   create_random_password=false
-  password = "admin"
+  password = "Winter15"
 
   # DB option group
   major_engine_version = "5.7"
