@@ -1,14 +1,14 @@
 module "db" {
   source  = "terraform-aws-modules/rds/aws"
 
-  identifier = "wordpress-db"
+  identifier = "wordpressdb"
 
   engine            = "mysql"
   engine_version    = "5.7"
   instance_class    = "db.r5.large"
   allocated_storage = 5
 
-  db_name  = "wordpress-db"
+  db_name  = "wordpressdb"
   username = "upma"
   port     = "3306"
 
