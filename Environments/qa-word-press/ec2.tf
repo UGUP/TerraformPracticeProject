@@ -7,8 +7,8 @@ module "ec2_instance" {
   instance_type          = var.instanceType
   key_name               = var.key
   monitoring             = true
-  vpc_security_group_ids = [module.vpc.default_security_group_id]
-  subnet_id              = module.vpc.private_subnets[0]
+  vpc_security_group_ids = [module.wordpress-vpc.module.sg]
+  subnet_id              = module.wordpress-vpc.public_subnets[0]
 
   tags = {
     Terraform   = "true"
