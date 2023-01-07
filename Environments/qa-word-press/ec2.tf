@@ -7,7 +7,7 @@ module "ec2_instance" {
   instance_type          = var.instanceType
   key_name               = var.key
   monitoring             = true
-  vpc_security_group_ids = [module.wordpress-vpc.module.sg]
+  vpc_security_group_ids = [module.sg.vpc_security_group_ids]
   subnet_id              = module.wordpress-vpc.public_subnets[0]
 
   tags = {

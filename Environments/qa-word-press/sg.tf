@@ -3,7 +3,7 @@ module "sg" {
 
   name        = "ssh"
   description = "Security group for user-service with custom ports open within VPC, and mysql publicly open"
-  vpc_id      = module.wordpress-vpc
+  vpc_id      = module.wordpress-vpc.vpc_id
 
   ingress_cidr_blocks      = ["10.10.0.0/16"]
   ingress_with_cidr_blocks = [
