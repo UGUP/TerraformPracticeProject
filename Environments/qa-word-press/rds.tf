@@ -37,6 +37,9 @@ module "db" {
   # DB parameter group
   family = "mysql5.7"
 
+  create_random_password=false
+  password = "admin"
+
   # DB option group
   major_engine_version = "5.7"
 
