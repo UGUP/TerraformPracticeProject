@@ -10,9 +10,9 @@ module "alb" {
   subnets            = [module.VPC_PRACTICE_PROJECT.public_subnets[0],module.VPC_PRACTICE_PROJECT.public_subnets[1]]
   security_groups    = [module.SG_PRACTICE_PROJECT.security_group_id]
 
-  access_logs = {
-    bucket = "s3-c38"
-  }
+#   access_logs = {
+#     bucket = "s3-c38"
+#   }
 
   target_groups = [
     {
