@@ -5,14 +5,15 @@
 module "EC2_Practice-Project" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   name = "EC2"
-  ami                    = data.aws_ami.NGINX
+  ami                    = "ami-0a6b2839d44d781b2"
   instance_type          = var.instanceType
   key_name               = var.key
   monitoring             = true
-  vpc_security_group_ids = [module.SG_PRACTICE_PROJECT.security_group_id]
+  vpc_security_group_ids = [module.VPC_PRACTICE_PROJECT.vpc_id]
   subnet_id              = module.VPC_PRACTICE_PROJECT.private_subnets[0]
 
   tags = {
-    name= "EC2_Practice-Project"
+    Terraform   = "true"
+    Environment = "dev"
   }
 }
