@@ -16,8 +16,8 @@ module "alb" {
 
   target_groups = [
     {
-      arn = module.target_group.arn
-      name = module.target_group.name
+      arn = module.target_group_practice_project.arn
+      name = module.target_group_practice_project.name
     }
   ]
 
