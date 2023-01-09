@@ -21,8 +21,8 @@ data "aws_ami" "NGINX" {
 
     region = "us-east-1"
 
-    output "ami_metadata" {
-  value = data.aws_ami.NGINX
 }
 
+    output "ami_metadata" {
+  value = data.aws_ami.NGINX
 }
