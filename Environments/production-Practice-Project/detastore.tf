@@ -3,6 +3,7 @@ data "aws_ami" "NGINX" {
   #most_recent      = true
   #name_regex       = "^NGINX"
   owners           = ["017706783036"]
+  region = "us-east-1"
 
   filter {
     name   = "name"
@@ -19,7 +20,7 @@ data "aws_ami" "NGINX" {
     values = ["hvm"]
   }
 
-    region = "us-east-1"
+ 
 
 }
 
