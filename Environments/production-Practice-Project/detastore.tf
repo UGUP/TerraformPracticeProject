@@ -2,7 +2,7 @@ data "aws_ami" "NGINX" {
   executable_users = ["self"]
   #most_recent      = true
   #name_regex       = "^NGINX"
-  owners           = ["017706783036"]
+  owners           = ["ami-08db21e74b3846719"]
 
   filter {
     name   = "name"
