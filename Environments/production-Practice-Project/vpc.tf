@@ -1,6 +1,6 @@
 #Create vpc using modules
 
-module "vpc" {
+module "VPC_PRACTICE_PROJECT" {
    source = "terraform-aws-modules/vpc/aws"
 
   name = "VPC-Practice-Project"
