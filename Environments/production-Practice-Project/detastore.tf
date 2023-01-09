@@ -18,4 +18,11 @@ data "aws_ami" "NGINX" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
+
+    region = "us-east-1"
+
+    output "ami_metadata" {
+  value = data.aws_ami.NGINX
+}
+
 }
