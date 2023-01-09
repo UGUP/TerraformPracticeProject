@@ -4,12 +4,11 @@ module "target_group" {
   name = "target-practice-project"
   port = 80
   protocol = "HTTP"
-  vpc_id = "vpc-123456"
+  vpc_id = module.VPC_PRACTICE_PROJECT.vpc_id
   targets = [
     {
       id = module.EC2_Practice-Project.id
       port = 80
-    }
-   
+    }  
   ]
 }
