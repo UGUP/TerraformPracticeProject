@@ -1,4 +1,4 @@
-module "target_group" {
+module "target_group_practice_project" {
   source = "terraform-aws-modules/alb/aws"
   version = "8.2.1"
   name = "target-practice-project"
