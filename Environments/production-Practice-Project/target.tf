@@ -1,6 +1,6 @@
 module "target_group" {
   source = "terraform-aws-modules/alb/aws"
-  version = "2.10.0"
+  version = "8.2.1"
   name = "target-practice-project"
   port = 80
   protocol = "HTTP"
