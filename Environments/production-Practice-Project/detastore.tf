@@ -1,5 +1,5 @@
 data "aws_ami" "NGINX" {
-  executable_users = ["self"]
+ # executable_users = ["self"]
 #   most_recent      = true
 #   name_regex       = "^NGINX"
   owners           = ["017706783036"]
